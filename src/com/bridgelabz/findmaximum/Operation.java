@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Operation {
 	public static Integer firstNumber,secondNumber,thirdNumber,max1;
 	public static Float number1=0.0f,number2=0.0f,number3=0.0f,max2=0.0f;
+	public static String string1,string2,string3,max3;
 
 	static Scanner sc = new Scanner(System.in);
 
@@ -23,6 +24,14 @@ public class Operation {
 		number2 = sc.nextFloat();
 		System.out.println("Enter third float Number");
 		number1 = sc.nextFloat();
+	}
+	public static void getInputForString() {
+		System.out.println("Enter first string");
+		string1 = sc.next();
+		System.out.println("Enter second string");
+		string2 = sc.next();
+		System.out.println("Enter third string");
+		string3 = sc.next();
 	}
 	public static Integer testMaximumInteger(Integer x,Integer y,Integer z) {
 		max1 = x;
@@ -44,5 +53,13 @@ public class Operation {
 		}
 		return max2;
 	}
-
-}
+	public static String testMaximumString(String k,String l,String m) {
+		max3 = k;
+		if(l.compareTo(max3) > 0){
+			max3 = l;
+		}
+		if(m.compareTo(max3) > 0){
+			max3 = m;
+		}
+		return max3;
+	}}
