@@ -2,7 +2,7 @@ package com.bridgelabz.findmaximum;
 
 import java.util.Scanner;
 
-public class Operation {
+public class Operation<E> {
 	public static Integer firstNumber,secondNumber,thirdNumber,max1;
 	public static Float number1=0.0f,number2=0.0f,number3=0.0f,max2=0.0f;
 	public static String string1,string2,string3,max3;
@@ -33,33 +33,14 @@ public class Operation {
 		System.out.println("Enter third string");
 		string3 = sc.next();
 	}
-	public static Integer testMaximumInteger(Integer x,Integer y,Integer z) {
-		max1 = x;
-		if(y.compareTo(max1) > 0){
-			max1 = y;
+	public static <E extends Comparable<E>> E testMaximum(E a,E b,E c) {
+		E max = a;
+		if(b.compareTo(max) > 0){
+			max = b;
 		}
-		if(z.compareTo(max1) > 0){
-			max1 = z;
+		if(c.compareTo(max) > 0){
+			max = c;
 		}
-		return max1;
-	}
-	public static Float testMaximumFloat(Float a,Float b,Float c) {
-		max2 = a;
-		if(b.compareTo(max2) > 0){
-			max2 = b;
+		return max;
 		}
-		if(c.compareTo(max2) > 0){
-			max2 = c;
-		}
-		return max2;
-	}
-	public static String testMaximumString(String k,String l,String m) {
-		max3 = k;
-		if(l.compareTo(max3) > 0){
-			max3 = l;
-		}
-		if(m.compareTo(max3) > 0){
-			max3 = m;
-		}
-		return max3;
-	}}
+}
